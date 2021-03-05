@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaCollectionsLearning/JavaCollectionsLearning.iml" filepath="$PROJECT_DIR$/JavaCollectionsLearning/JavaCollectionsLearning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LearningCollectionsJava.iml" filepath="$PROJECT_DIR$/.idea/LearningCollectionsJava.iml" />
+    </modules>
+  </component>
+</project>
