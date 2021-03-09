@@ -7,7 +7,9 @@ public class JavaCollections {
     public static void main (String[] args)
     {
 
-        TestHashSet();
+        // TestHashSet();
+        // TestLinkedHashSet();
+        TestTreeSet();
     }
 
 
@@ -38,4 +40,81 @@ public class JavaCollections {
         System.out.println("HashSet не упорядочивает элементы и не сортирует.");
         System.out.println("HashSet самый быстрый из реализаций Set и основан на HashMap.");
     }
+
+
+    public static void TestLinkedHashSet ()
+    {
+        LinkedHashSet <String> linHashSet = new LinkedHashSet();
+        System.out.println("Изучение LinkedHashSet коллекции");
+        System.out.println("Создадим обьект такого класса и добавим несколько записей.");
+        linHashSet.add("Клен");
+        linHashSet.add("Дуб");
+        linHashSet.add("Ива");
+        linHashSet.add("Сирень");
+
+        System.out.printf("Размера коллекции: %d\n", linHashSet.size());
+
+
+        Iterator <String> linkIter = linHashSet.iterator();
+
+        while (linkIter.hasNext())
+        {
+            System.out.println(linkIter.next());
+
+        }
+
+        System.out.println("1. В каком порядке мы добавляли обьекты в коллекцию, " +
+                "в таком порядке они и извелекаются.");
+        System.out.println("То есть обьекты упорядочены");
+
+        System.out.println("Добавим обект Сирень еще раз.");
+        linHashSet.add("Сирень");
+        System.out.printf("Размера коллекции: %d\n", linHashSet.size());
+        System.out.println("Также добавляет уникальные обьекты.");
+
+        linHashSet.remove("Дуб");
+
+        System.out.printf("Размера коллекции: %d\n", linHashSet.size());
+
+        linkIter = linHashSet.iterator();
+
+        while (linkIter.hasNext())
+        {
+            System.out.println(linkIter.next());
+
+        }
+    }
+
+   public static void TestTreeSet()
+   {
+       System.out.println("TreeSet реализация");
+       TreeSet<String> newTreeSet = new TreeSet<>();
+       System.out.println("Добавим в коллекцию обьекты.");
+
+       newTreeSet.add("Антон");
+       newTreeSet.add("Катя");
+       newTreeSet.add("Юра");
+       newTreeSet.add("Сергей");
+       newTreeSet.add("Иван");
+
+       System.out.println("Размер массива:"+ newTreeSet.size());
+
+       Iterator<String> iterTreeSet = newTreeSet.iterator();
+
+       while(iterTreeSet.hasNext())
+       {
+           System.out.println(iterTreeSet.next());
+       }
+
+       System.out.println("TreeSet коллекции отсортированы по алфавиту");
+       System.out.println("Добавим несколько повторяющихся обьектов в коллекцию.");
+       newTreeSet.add("Юра");
+       newTreeSet.add("Сергей");
+       newTreeSet.add("Иван");
+       System.out.println("Размер массива:"+ newTreeSet.size());
+       System.out.println("Коллекция также хранит уникальные объекты");
+       System.out.println("Самая медленная коллекция.");
+   }
+
+
 }
